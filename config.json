@@ -1,0 +1,37 @@
+{
+  "vessel": "BOUNTY HUNTER",
+  "listen": "0.0.0.0",
+  "port": 8088,
+  "mode": "demo",
+  "lookout_service": "lookout",
+  "nmea_device": "/dev/ttyUSB0",
+  "nmea_command": "actisense-serial {device} | analyzer -json -hires",
+  "poll_ms": 400,
+  "engines": { "port": 0, "stbd": 1, "gen": 2 },
+  "tanks": {
+    "fuel_capacity_gal": 525,
+    "freshwater_capacity_gal": 80,
+    "holding_capacity_gal": 30
+  },
+  "zones": {
+    "rpm": { "unit": "rpm", "green": [0, 2600], "yellow": [2600, 3000], "red_high": 3000, "red_low": null },
+    "coolant_f": { "unit": "°F", "green": [160, 195], "yellow": [195, 205], "red_high": 205, "red_low": 140, "running_only_low": true },
+    "oil_temp_f": { "unit": "°F", "green": [160, 220], "yellow": [220, 240], "red_high": 240, "red_low": null },
+    "oil_psi": { "unit": "psi", "green": [25, 80], "yellow": [15, 25], "red_high": null, "red_low": 15, "running_only_low": true },
+    "boost_psi": { "unit": "psi", "green": [0, 25], "yellow": [25, 30], "red_high": 30, "red_low": null },
+    "volts_24": { "unit": "V", "green": [25.0, 28.8], "yellow": [24.0, 25.0], "red_high": 30.0, "red_low": 24.0 },
+    "volts_12": { "unit": "V", "green": [12.4, 14.6], "yellow": [12.0, 12.4], "red_high": 15.2, "red_low": 12.0 },
+    "fuel_rate_gph": { "unit": "gph", "green": [0, 40], "yellow": [40, 50], "red_high": 50, "red_low": null },
+    "load_pct": { "unit": "%", "green": [0, 85], "yellow": [85, 95], "red_high": 95, "red_low": null },
+    "fuel_pct": { "unit": "%", "green": [25, 100], "yellow": [12, 25], "red_high": null, "red_low": 12 },
+    "water_pct": { "unit": "%", "green": [25, 100], "yellow": [12, 25], "red_high": null, "red_low": 12 },
+    "hours": { "unit": "hrs", "green": [0, 99999], "yellow": [0, 0], "red_high": null, "red_low": null },
+    "gen_rpm": { "unit": "rpm", "green": [1750, 1850], "yellow": [1700, 1750], "red_high": 1900, "red_low": 1650, "running_only_low": true },
+    "gen_oil_psi": { "unit": "psi", "green": [30, 70], "yellow": [20, 30], "red_high": null, "red_low": 18, "running_only_low": true },
+    "gen_coolant_f": { "unit": "°F", "green": [160, 200], "yellow": [200, 210], "red_high": 215, "red_low": 140, "running_only_low": true },
+    "gen_ac_v": { "unit": "V", "green": [228, 252], "yellow": [220, 228], "red_high": 258, "red_low": 216 },
+    "gen_ac_hz": { "unit": "Hz", "green": [59.0, 61.0], "yellow": [58.0, 59.0], "red_high": 63.0, "red_low": 57.5 },
+    "gen_ac_a": { "unit": "A", "green": [0, 45], "yellow": [45, 52], "red_high": 55, "red_low": null },
+    "holding_pct": { "unit": "%", "green": [0, 70], "yellow": [70, 90], "red_high": 90, "red_low": null }
+  }
+}
