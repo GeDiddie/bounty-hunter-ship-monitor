@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Bounty Hunter — Vessel</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="vessel-page">
+  <header class="top">
+    <div class="brand">BOUNTY HUNTER<small>2016 Viking 42 Sport Tower</small></div>
+    <div class="mode-pill" id="mode">…</div>
+    <div class="actions">
+      <a class="btn" href="/cards">Cards</a>
+    </div>
+  </header>
+  <div class="vessel-shell">
+    <section class="plan-wrap">
+      <div class="plan-legend">
+        <span><i class="dot green"></i>OK</span>
+        <span><i class="dot yellow"></i>Watch</span>
+        <span><i class="dot red"></i>Alarm</span>
+        <span><i class="dot idle"></i>Off / no data</span>
+      </div>
+      <svg class="plan" viewBox="0 0 420 900" role="img" aria-label="Bounty Hunter deck plan">
+        <path class="hull" d="M210 18 C 132 90, 78 210, 70 360 L 66 620 C 66 700, 88 760, 140 820 L 210 882 L 280 820 C 332 760, 354 700, 354 620 L 350 360 C 342 210, 288 90, 210 18 Z"/>
+        <rect class="space" x="86" y="668" width="248" height="128" rx="18"/>
+        <text class="lab" x="210" y="788">COCKPIT</text>
+        <rect class="hot" data-zone="mezz" x="96" y="672" width="228" height="42" rx="10"/>
+        <text class="lab sm" x="210" y="698">MEZZANINE · ER HATCH</text>
+        <rect class="hot" data-zone="helm" x="100" y="548" width="220" height="108" rx="14"/>
+        <text class="lab" x="210" y="592">COMMAND DECK</text>
+        <text class="lab sm" x="210" y="612">GPSMAP 9219 · 8610 · VV7</text>
+        <circle class="hot" data-zone="tower" cx="210" cy="524" r="22"/>
+        <text class="lab sm" x="210" y="528">TOWER</text>
+        <rect class="hot" data-zone="salon" x="96" y="430" width="228" height="104" rx="12"/>
+        <text class="lab" x="210" y="478">SALON</text>
+        <rect class="hot" data-zone="galley" x="230" y="338" width="94" height="82" rx="10"/>
+        <text class="lab sm" x="277" y="384">GALLEY</text>
+        <rect class="hot" data-zone="guest" x="96" y="250" width="100" height="78" rx="10"/>
+        <text class="lab sm" x="146" y="294">GUEST</text>
+        <rect class="hot" data-zone="heads" x="206" y="250" width="118" height="78" rx="10"/>
+        <text class="lab sm" x="265" y="286">HEADS</text>
+        <path class="hot" data-zone="master" d="M210 46 C 158 96, 128 150, 122 214 L 298 214 C 292 150, 262 96, 210 46 Z"/>
+        <text class="lab" x="210" y="150">MASTER</text>
+        <rect class="hot eng" data-zone="port" x="96" y="722" width="100" height="58" rx="8"/>
+        <text class="lab sm" x="146" y="748">PORT QSC</text>
+        <text class="val" id="pin-port" x="146" y="766">—</text>
+        <rect class="hot eng" data-zone="stbd" x="224" y="722" width="100" height="58" rx="8"/>
+        <text class="lab sm" x="274" y="748">STBD QSC</text>
+        <text class="val" id="pin-stbd" x="274" y="766">—</text>
+        <rect class="hot eng" data-zone="gen" x="156" y="630" width="108" height="34" rx="8"/>
+        <text class="lab sm" x="210" y="646">PHASOR GEN</text>
+        <text class="val" id="pin-gen" x="210" y="658">—</text>
+        <ellipse class="hot" data-zone="portpod" cx="146" cy="848" rx="28" ry="14"/>
+        <text class="lab sm" x="146" y="852">P POD</text>
+        <ellipse class="hot" data-zone="stbdpod" cx="274" cy="848" rx="28" ry="14"/>
+        <text class="lab sm" x="274" y="852">S POD</text>
+        <rect class="hot tank" data-zone="fuel" x="118" y="400" width="80" height="24" rx="6"/>
+        <text class="lab sm" x="158" y="416">FUEL</text>
+        <rect class="hot tank" data-zone="water" x="222" y="400" width="80" height="24" rx="6"/>
+        <text class="lab sm" x="262" y="416">WATER</text>
+        <rect class="hot" data-zone="seakeeper" x="168" y="356" width="84" height="28" rx="6"/>
+        <text class="lab sm" x="210" y="374">SEAKEEPER</text>
+      </svg>
+    </section>
+    <aside class="drawer" id="drawer">
+      <div class="drawer-head">
+        <div>
+          <div class="kicker" id="zone-kicker">VESSEL</div>
+          <h2 id="zone-title">Overview</h2>
+        </div>
+        <button class="btn" id="close-drawer" type="button">Close</button>
+      </div>
+      <p class="hint" id="zone-hint">Tap any station on the plan.</p>
+      <div class="grid" id="zone-grid"></div>
+    </aside>
+  </div>
+  <script src="/vessel.js"></script>
+</body>
+</html>
